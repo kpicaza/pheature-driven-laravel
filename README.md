@@ -9,26 +9,24 @@ In the following lines we will define the initial description of the ecommerce a
 ## Requirements
 
 * PHP >= 8.0
-* yarn
+* docker
 * composer
 
 ## Install
 
 ```bash
-git clone git@github.com:kpicaza/pheature-laravel-pre-example.git
-cd pheature-laravel-pre-example
-git submodule update --init --recursive
-composer update
-yarn
-yarn build
-yarn run encore production
-docker-compose up --build -d
-docker-compose run php app/bin/console doctrine:migrations:migrate
-docker-compose run php app/bin/console app:create:admin # user: test@example.com, password: pheature
+git clone git@github.com:kpicaza/pheature-driven-laravel.git
+cd pheature-driven-laravel
+composer install
+vendor/bin/sail up --build -d
+vendor/bin/sail php artisan migrate
+vendor/bin/sail php artisan pheature:dbal:init-toggle
+vendor/bin/sail npm ci && npm run dev
+vendor/bin/sail php artisan storage:link
 ```
 
 Open browser in [http://127.0.0.1](http://127.0.0.1) you can see the website, or access to admin area
-in [http://127.0.0.1/admin/login?role=developer](http://127.0.0.1/admin/login?role=developer)
+in [http://127.0.0.1/admin](http://127.0.0.1/admin)
 
 ## Context
 
@@ -42,10 +40,10 @@ We will build a landing page with a few requirements:
 
 In that case we will use in-memory toggle implementation to use **release toggles**.
 
-- [ ] It should show the arstisan's logo.
-- [ ] It should show the artisans's commercial name.
-- [ ] It should show some amigurumi pictures.
-- [ ] It should show contact information.
+- [x] It should show the arstisan's logo.
+- [x] It should show the artisans's commercial name.
+- [x] It should show some amigurumi pictures.
+- [x] It should show contact information.
 
 2. Second iteration:
 
@@ -56,11 +54,16 @@ A **product** should have at least a *name*, *picture*, and *price*.
 
 To create the products, we will need an authentication system for content editors, and an administration panel where manage the products.
 
-- [ ] It should have content editor users
-- [ ] It should have products
-- [ ] It should have a backoffice to add products
-- [ ] It should have a catalog that shows available products
+- [x] It should have content editor users
+- [x] It should have products
+- [x] It should have a backoffice to add products
+- [x] It should have a catalog that shows available products
 
 3. Third iteration
 
+## Screenshots
+
+![Toggle Back Office](./storage/repo-images/toggle-backoffice.jpg)
+![Products Back Office](./storage/repo-images/products-backoffice.jpg)
+![Catalog](./storage/repo-images/catalog.jpg)
 
