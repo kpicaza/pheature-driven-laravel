@@ -28,6 +28,18 @@ class PlatformProvider extends OrchidServiceProvider
     public function registerMainMenu(): array
     {
         return [
+            Menu::make(__('Products'))
+                ->icon('bag')
+                ->route('platform.product.list')
+                ->permission('platform.systems.products')
+                ->title(__('Store')),
+
+            Menu::make(__('Toggles'))
+                ->icon('flag')
+                ->route('platform.pheature.toggle')
+                ->permission('platform.systems.toggles')
+                ->title(__('Site management')),
+
             Menu::make(__('Users'))
                 ->icon('user')
                 ->route('platform.systems.users')
@@ -38,11 +50,6 @@ class PlatformProvider extends OrchidServiceProvider
                 ->icon('lock')
                 ->route('platform.systems.roles')
                 ->permission('platform.systems.roles'),
-
-            Menu::make(__('Toggles'))
-                ->icon('flag')
-                ->route('platform.pheature.toggle')
-                ->permission('platform.systems.toggles'),
         ];
     }
 
@@ -67,7 +74,8 @@ class PlatformProvider extends OrchidServiceProvider
             ItemPermission::group(__('System'))
                 ->addPermission('platform.systems.roles', __('Roles'))
                 ->addPermission('platform.systems.users', __('Users'))
-                ->addPermission('platform.systems.toggles', __('Toggles')),
+                ->addPermission('platform.systems.toggles', __('Toggles'))
+                ->addPermission('platform.systems.products', __('Products')),
         ];
     }
 }

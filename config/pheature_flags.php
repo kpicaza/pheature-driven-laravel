@@ -11,9 +11,10 @@ use Pheature\Model\Toggle\StrategyFactory;
 use Pheature\Model\Toggle\StrictMatchingSegment;
 
 return [
-    'api_prefix' => '',
-    'api_enabled' => false,
+    'api_prefix' => 'admin/api',
+    'api_enabled' => true,
     'driver' => 'dbal',
+    'middleware' => ['api', 'platform'],
     'segment_types' => [
         [
             'type' => IdentitySegment::NAME,

@@ -35,6 +35,15 @@ Route::screen('/main', PlatformScreen::class)
 
 Route::screen('/toggles', \App\Orchid\Screens\Pheature\ToggleScreen::class)->name('platform.pheature.toggle');
 
+Route::screen('products/{product?}/edit', \App\Orchid\Screens\Product\ProductEditScreen::class)
+    ->name('platform.product.edit');
+
+Route::screen('products/create', \App\Orchid\Screens\Product\ProductEditScreen::class)
+    ->name('platform.product.create');
+
+Route::screen('products', \App\Orchid\Screens\Product\ProductListScreen::class)
+    ->name('platform.product.list');
+
 // Platform > Profile
 Route::screen('profile', UserProfileScreen::class)
     ->name('platform.profile')

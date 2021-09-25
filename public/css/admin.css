@@ -1,0 +1,6 @@
+.fields-picture-container img.picture-preview {
+    max-width: 80px;
+    float: left;
+    clear: right;
+    margin-right: 15px;
+}

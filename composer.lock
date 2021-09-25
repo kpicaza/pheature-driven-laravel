@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ea423d6dc18e3dccef5335f0fefd703b",
+    "content-hash": "84fe8b556e8b9f97484187064ffedb3c",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -121,6 +121,79 @@
                 }
             ],
             "time": "2021-08-15T20:50:18+00:00"
+        },
+        {
+            "name": "composer/package-versions-deprecated",
+            "version": "1.11.99.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/composer/package-versions-deprecated.git",
+                "reference": "b174585d1fe49ceed21928a945138948cb394600"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/composer/package-versions-deprecated/zipball/b174585d1fe49ceed21928a945138948cb394600",
+                "reference": "b174585d1fe49ceed21928a945138948cb394600",
+                "shasum": ""
+            },
+            "require": {
+                "composer-plugin-api": "^1.1.0 || ^2.0",
+                "php": "^7 || ^8"
+            },
+            "replace": {
+                "ocramius/package-versions": "1.11.99"
+            },
+            "require-dev": {
+                "composer/composer": "^1.9.3 || ^2.0@dev",
+                "ext-zip": "^1.13",
+                "phpunit/phpunit": "^6.5 || ^7"
+            },
+            "type": "composer-plugin",
+            "extra": {
+                "class": "PackageVersions\\Installer",
+                "branch-alias": {
+                    "dev-master": "1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "PackageVersions\\": "src/PackageVersions"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Marco Pivetta",
+                    "email": "ocramius@gmail.com"
+                },
+                {
+                    "name": "Jordi Boggiano",
+                    "email": "j.boggiano@seld.be"
+                }
+            ],
+            "description": "Composer plugin that provides efficient querying for installed package versions (no runtime IO)",
+            "support": {
+                "issues": "https://github.com/composer/package-versions-deprecated/issues",
+                "source": "https://github.com/composer/package-versions-deprecated/tree/1.11.99.4"
+            },
+            "funding": [
+                {
+                    "url": "https://packagist.com",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/composer",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/composer/composer",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2021-09-13T08:41:34+00:00"
         },
         {
             "name": "dflydev/dot-access-data",
@@ -298,34 +371,35 @@
         },
         {
             "name": "doctrine/dbal",
-            "version": "2.13.3",
+            "version": "3.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/dbal.git",
-                "reference": "0d7adf4cadfee6f70850e5b163e6cdd706417838"
+                "reference": "3ee2622b57370c786f531678f6641208747f7bfc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/dbal/zipball/0d7adf4cadfee6f70850e5b163e6cdd706417838",
-                "reference": "0d7adf4cadfee6f70850e5b163e6cdd706417838",
+                "url": "https://api.github.com/repos/doctrine/dbal/zipball/3ee2622b57370c786f531678f6641208747f7bfc",
+                "reference": "3ee2622b57370c786f531678f6641208747f7bfc",
                 "shasum": ""
             },
             "require": {
+                "composer/package-versions-deprecated": "^1.11.99",
                 "doctrine/cache": "^1.0|^2.0",
                 "doctrine/deprecations": "^0.5.3",
                 "doctrine/event-manager": "^1.0",
-                "ext-pdo": "*",
-                "php": "^7.1 || ^8"
+                "php": "^7.3 || ^8.0"
             },
             "require-dev": {
                 "doctrine/coding-standard": "9.0.0",
                 "jetbrains/phpstorm-stubs": "2021.1",
                 "phpstan/phpstan": "0.12.96",
-                "phpunit/phpunit": "^7.5.20|^8.5|9.5.5",
+                "phpstan/phpstan-strict-rules": "^0.12.11",
+                "phpunit/phpunit": "9.5.5",
                 "psalm/plugin-phpunit": "0.16.1",
                 "squizlabs/php_codesniffer": "3.6.0",
-                "symfony/cache": "^4.4",
-                "symfony/console": "^2.0.5|^3.0|^4.0|^5.0",
+                "symfony/cache": "^5.2|^6.0",
+                "symfony/console": "^2.0.5|^3.0|^4.0|^5.0|^6.0",
                 "vimeo/psalm": "4.10.0"
             },
             "suggest": {
@@ -337,7 +411,7 @@
             "type": "library",
             "autoload": {
                 "psr-4": {
-                    "Doctrine\\DBAL\\": "lib/Doctrine/DBAL"
+                    "Doctrine\\DBAL\\": "src"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -380,14 +454,13 @@
                 "queryobject",
                 "sasql",
                 "sql",
-                "sqlanywhere",
                 "sqlite",
                 "sqlserver",
                 "sqlsrv"
             ],
             "support": {
                 "issues": "https://github.com/doctrine/dbal/issues",
-                "source": "https://github.com/doctrine/dbal/tree/2.13.3"
+                "source": "https://github.com/doctrine/dbal/tree/3.1.2"
             },
             "funding": [
                 {
@@ -403,7 +476,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-09-12T19:11:48+00:00"
+            "time": "2021-09-12T20:56:32+00:00"
         },
         {
             "name": "doctrine/deprecations",
@@ -1594,6 +1667,64 @@
                 "source": "https://github.com/laravel/tinker/tree/v2.6.1"
             },
             "time": "2021-03-02T16:53:12+00:00"
+        },
+        {
+            "name": "laravel/ui",
+            "version": "v3.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laravel/ui.git",
+                "reference": "07d725813350c695c779382cbd6dac0ab8665537"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laravel/ui/zipball/07d725813350c695c779382cbd6dac0ab8665537",
+                "reference": "07d725813350c695c779382cbd6dac0ab8665537",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/console": "^8.42",
+                "illuminate/filesystem": "^8.42",
+                "illuminate/support": "^8.42",
+                "illuminate/validation": "^8.42",
+                "php": "^7.3|^8.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.x-dev"
+                },
+                "laravel": {
+                    "providers": [
+                        "Laravel\\Ui\\UiServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Laravel\\Ui\\": "src/",
+                    "Illuminate\\Foundation\\Auth\\": "auth-backend/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Taylor Otwell",
+                    "email": "taylor@laravel.com"
+                }
+            ],
+            "description": "Laravel UI utilities and presets.",
+            "keywords": [
+                "laravel",
+                "ui"
+            ],
+            "support": {
+                "source": "https://github.com/laravel/ui/tree/v3.3.0"
+            },
+            "time": "2021-05-25T16:45:33+00:00"
         },
         {
             "name": "league/commonmark",
@@ -2899,25 +3030,25 @@
             "dist": {
                 "type": "path",
                 "url": "packages/laravel-toggle",
-                "reference": "5721d3642cc3660896c182e83f3d27c8202224d3"
+                "reference": "f0854983ce5db2e1c2157479dc18eae179cc01cb"
             },
             "require": {
                 "illuminate/support": "^8.37",
-                "laravel/framework": ">=8.5.17",
+                "laravel/framework": "^8.40",
                 "nyholm/psr7": "^1.4",
-                "pheature/dbal-toggle": "1.0.x-dev",
                 "pheature/inmemory-toggle": "1.0.x-dev",
-                "pheature/php-sdk": "1.0.x-dev",
                 "pheature/toggle-core": "1.0.x-dev",
-                "pheature/toggle-crud": "1.0.x-dev",
                 "pheature/toggle-crud-psr11-factories": "1.0.x-dev",
-                "pheature/toggle-crud-psr7-api": "1.0.x-dev",
                 "pheature/toggle-model": "1.0.x-dev",
                 "php": "^7.4|^8.0"
             },
             "require-dev": {
                 "icanhazstring/composer-unused": "^0.7.5",
                 "infection/infection": "^0.23.0",
+                "pheature/dbal-toggle": "1.0.x-dev",
+                "pheature/php-sdk": "1.0.x-dev",
+                "pheature/toggle-crud": "1.0.x-dev",
+                "pheature/toggle-crud-psr7-api": "1.0.x-dev",
                 "phpro/grumphp": "^1.0",
                 "phpstan/phpstan": "^0.12",
                 "phpunit/phpunit": "^8.0 || ^9.0",
@@ -2925,6 +3056,12 @@
                 "squizlabs/php_codesniffer": "^3.4",
                 "symfony/var-dumper": "^4.2 || ^5.0",
                 "vimeo/psalm": "^4.4"
+            },
+            "suggest": {
+                "pheature/dbal-toggle": "Doctrine DBAL pheature toggle implementation.",
+                "pheature/php-sdk": "Use simplified view model to get evaluted feature toggles.",
+                "pheature/toggle-crud": "Add a CRUD layer to interact with features.",
+                "pheature/toggle-crud-psr7-api": "Add a HTTP API layer to interact with features."
             },
             "type": "library",
             "extra": {
@@ -2997,79 +3134,6 @@
             "transport-options": {
                 "relative": true
             }
-        },
-        {
-            "name": "pheature/php-sdk",
-            "version": "1.0.x-dev",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/pheature-flags/php-sdk.git",
-                "reference": "a781fb611317226393e2eddc4a5adac4479e2403"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/pheature-flags/php-sdk/zipball/a781fb611317226393e2eddc4a5adac4479e2403",
-                "reference": "a781fb611317226393e2eddc4a5adac4479e2403",
-                "shasum": ""
-            },
-            "require": {
-                "pheature/toggle-core": "1.0.x-dev",
-                "php": "^7.4|^8.0",
-                "psr/container": "^1.0.0|^2.0.0"
-            },
-            "require-dev": {
-                "icanhazstring/composer-unused": "^0.7.5",
-                "infection/infection": "^0.23.0",
-                "phpro/grumphp": "^1.0",
-                "phpstan/phpstan": "^0.12",
-                "phpunit/phpunit": "^8.0 || ^9.0",
-                "roave/infection-static-analysis-plugin": "^1.8",
-                "squizlabs/php_codesniffer": "^3.4",
-                "symfony/var-dumper": "^4.2 || ^5.0",
-                "vimeo/psalm": "^4.4"
-            },
-            "default-branch": true,
-            "type": "library",
-            "extra": {
-                "laminas": {
-                    "config-provider": "Pheature\\Sdk\\Container\\ConfigProvider"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Pheature\\Sdk\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "kpicaza"
-                },
-                {
-                    "name": "pcs289"
-                },
-                {
-                    "name": "xserrat"
-                }
-            ],
-            "description": "Feature Flags As A Service PHP SDK.",
-            "keywords": [
-                "feature-flags",
-                "feature-toggle"
-            ],
-            "support": {
-                "source": "https://github.com/pheature-flags/php-sdk/tree/1.0.x"
-            },
-            "funding": [
-                {
-                    "url": "https://github.com/pheature-flags",
-                    "type": "github"
-                }
-            ],
-            "time": "2021-09-15T20:42:28+00:00"
         },
         {
             "name": "pheature/toggle-core",
@@ -4178,24 +4242,25 @@
         },
         {
             "name": "ramsey/uuid",
-            "version": "4.2.1",
+            "version": "4.2.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ramsey/uuid.git",
-                "reference": "fe665a03df4f056aa65af552a96e1976df8c8dae"
+                "reference": "445999c26a53aca1faa0b7b8f4f0d61fc9484c71"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ramsey/uuid/zipball/fe665a03df4f056aa65af552a96e1976df8c8dae",
-                "reference": "fe665a03df4f056aa65af552a96e1976df8c8dae",
+                "url": "https://api.github.com/repos/ramsey/uuid/zipball/445999c26a53aca1faa0b7b8f4f0d61fc9484c71",
+                "reference": "445999c26a53aca1faa0b7b8f4f0d61fc9484c71",
                 "shasum": ""
             },
             "require": {
                 "brick/math": "^0.8 || ^0.9",
                 "ext-json": "*",
-                "php": "^7.2 || ^8",
+                "php": "^7.2 || ~8.0.0 || ~8.1.0",
                 "ramsey/collection": "^1.0",
-                "symfony/polyfill-ctype": "^1.8"
+                "symfony/polyfill-ctype": "^1.8",
+                "symfony/polyfill-php80": "^1.14"
             },
             "replace": {
                 "rhumsaa/uuid": "self.version"
@@ -4259,7 +4324,7 @@
             ],
             "support": {
                 "issues": "https://github.com/ramsey/uuid/issues",
-                "source": "https://github.com/ramsey/uuid/tree/4.2.1"
+                "source": "https://github.com/ramsey/uuid/tree/4.2.2"
             },
             "funding": [
                 {
@@ -4271,7 +4336,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-08-11T01:06:55+00:00"
+            "time": "2021-09-24T18:53:47+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -9603,7 +9668,8 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "pheature/dbal-toggle": 20,
-        "pheature/laravel-toggle": 20
+        "pheature/laravel-toggle": 20,
+        "pheature/toggle-crud-psr7-api": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,

@@ -17,10 +17,12 @@
         "laravel/framework": "^8.54",
         "laravel/sanctum": "^2.11",
         "laravel/tinker": "^2.5",
+        "laravel/ui": "^3.3",
         "nyholm/psr7": "^1.4",
         "orchid/platform": "^10.15",
         "pheature/dbal-toggle": "@dev",
         "pheature/laravel-toggle": "@dev",
+        "pheature/toggle-crud-psr7-api": "@dev",
         "symfony/psr-http-message-bridge": "^2.1"
     },
     "require-dev": {

@@ -7,7 +7,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 @endpush
 
-<toggle-list api-url="http://127.0.0.1"></toggle-list>
+<toggle-list api-url="http://127.0.0.1/admin/api"></toggle-list>
 
 @push('scripts')
 <script src="https://cdn.jsdelivr.net/gh/pheature-flags/toggle-ui/dist/toggle-ui.min.js"></script>
